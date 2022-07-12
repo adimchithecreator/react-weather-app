@@ -6,8 +6,8 @@ import "./Weather.css";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo text-center row">
-        <div className="col-5">
+    <div className="WeatherInfo row">
+        <div className="col-4">
       <h1>{props.data.city}</h1>
       <ul>
         <li>
@@ -15,15 +15,15 @@ export default function WeatherInfo(props) {
         </li>
       </ul>
           <div className="clearfix">
-            <div className="row " >
+            <div className="row">
             <div className="col-2 mt-2 ">
               <WeatherIcon code={props.data.icon} size={72} /> 
               </div>
-              <div className="col-2 mt-3">
+              <div className="col-2 mt-3 " >
               <WeatherTemperature celsius={props.data.temperature} />
               </div>
              
-              <p className="text-capitalize">{props.data.description}</p>
+              <p style={{fontSize:"30px", fontWeight:"bold"} } className="text-capitalize text-dark ">{props.data.description}</p>
             </div>
 
           </div>
