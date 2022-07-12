@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { ThreeDots } from  'react-loader-spinner'
+
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -64,6 +67,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return <ThreeDots color="#00BFFF" height={80} width={80} />
   }
 }
