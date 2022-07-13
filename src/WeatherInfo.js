@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
+import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -26,17 +27,17 @@ export default function WeatherInfo(props) {
               <p style={{fontSize:"20px", fontWeight:"bold"} } className="text-capitalize text-dark ">{props.data.description}</p>
             </div>
 
-          </div>
+          
         </div>
-        <div className="row">
-        <div className="col-2 text-center">
+        <div className="row speed">
+        <div className="col">
             <h5> Humidity</h5>
             <p className="text-dark">
           
            {props.data.humidity}%
            </p>
             </div>
-            <div className="col-2 text-center" >
+            <div className="col text-center" >
                 <h5>
                 Wind
                 </h5>
@@ -45,6 +46,12 @@ export default function WeatherInfo(props) {
             </p>
           
         </div>
+        </div>
+        </div>
+        
+        <div className="col-8">
+<WeatherForecast/>
+
         </div>
   </div>
   );

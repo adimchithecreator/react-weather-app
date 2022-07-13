@@ -29,8 +29,10 @@
     margin-left: 10px;
   }
   
-  .Weather canvas {
-    
+  .Weather .speed {
+    display: flex;
+justify-content: center;
+gap: 5px;
   }
   
   .Weather .unit {
