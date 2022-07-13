@@ -1,7 +1,7 @@
 .WeatherForecast {
     text-align: center;
-    margin-top: 50px;
-    padding-top: 130px;
+    
+    padding-top: 13em;
   }
   .WeatherForecast:hover{
     background-color: #5596F6;
