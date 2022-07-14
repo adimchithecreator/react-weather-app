@@ -3,29 +3,28 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
-import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
         <div className="">
-      <h1 className="ml-5 mt-3">{props.data.city}</h1>
+      <h1 className="mt-5">{props.data.city}</h1>
       <ul>
         <li>
           <FormattedDate date={props.data.date} />
         </li>
       </ul>
           <div className="clearFix">
-            <div className="row wedd">
-            <div className="col-2 mt-2">
+            <div className=" wedd">
+            <div className=" mt-2">
               <WeatherIcon code={props.data.icon} size={72} /> 
               </div>
-              <div className="col-2 mt-3 " >
+              <div className=" mt-3 " >
               <WeatherTemperature celsius={props.data.temperature} style={{textAlign:"center"}} />
               </div>
-             
-              <p style={{fontSize:"20px", fontWeight:"bold"} } className="text-capitalize text-dark ">{props.data.description}</p>
-            </div>
+             </div>
+              <p style={{fontSize:"20px", fontWeight:"bold"} } className="text-capitalize text-dark mt-5">{props.data.description}</p>
+            
 
           
         </div>
@@ -50,7 +49,7 @@ export default function WeatherInfo(props) {
         </div>
     
         <div className="">
-       <WeatherForecast/>
+       
         </div>
   </div>
   );

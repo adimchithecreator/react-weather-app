@@ -4,6 +4,7 @@ import axios from "axios";
 import "./Weather.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { ThreeDots } from  'react-loader-spinner'
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
@@ -44,7 +45,7 @@ export default function Weather(props) {
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-3">
+            <div className="col-9">
               <input
                 type="search"
                 placeholder="Enter a city.."
@@ -53,17 +54,17 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-1">
+            <div className="col-3">
               <input
                 type="submit"
                 value="Search"
-                className="btn w-30"
+                className="btn w-100"
               />
             </div>
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-
+        <WeatherForecast/>
      </div>
     );
   } else {
