@@ -63,11 +63,11 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-       
+
      </div>
     );
   } else {
     search();
-    return <ThreeDots color="#00BFFF" height={80} width={80} />
+    return <ThreeDots color="#00BFFF"  height={80} width={80} />
   }
 }

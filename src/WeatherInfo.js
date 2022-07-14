@@ -7,8 +7,8 @@ import WeatherForecast from "./WeatherForecast";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo row">
-        <div className="col-4">
+    <div className="WeatherInfo">
+        <div className="">
       <h1 className="ml-5 mt-3">{props.data.city}</h1>
       <ul>
         <li>
@@ -29,15 +29,15 @@ export default function WeatherInfo(props) {
 
           
         </div>
-        <div className="row speed">
-        <div className="col">
+        <div className=" speed">
+        <div className="">
             <h5> Humidity</h5>
             <p className="text-dark">
           
            {props.data.humidity}%
            </p>
             </div>
-            <div className="col text-center" >
+            <div className="text-center" >
                 <h5>
                 Wind
                 </h5>
@@ -48,10 +48,9 @@ export default function WeatherInfo(props) {
         </div>
         </div>
         </div>
-        
-        <div className="col-8">
-<WeatherForecast/>
-
+    
+        <div className="">
+       <WeatherForecast/>
         </div>
   </div>
   );
