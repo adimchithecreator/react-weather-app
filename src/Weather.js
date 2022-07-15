@@ -70,7 +70,7 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <div className="d-flex justify-content-center">
+      <div className="">
     <TailSpin color="#00BFFF" display="flex" height={80} width={80} />
     </div>
     )
