@@ -24,15 +24,11 @@ export default function WeatherInfo(props) {
               </div>
              </div>
               <p style={{fontSize:"20px", fontWeight:"bold"} } className="text-capitalize text-dark mt-5">{props.data.description}</p>
-            
-
-          
         </div>
         <div className=" speed">
         <div className="">
             <h5> Humidity</h5>
             <p className="text-dark">
-          
            {props.data.humidity}%
            </p>
             </div>
@@ -43,13 +39,8 @@ export default function WeatherInfo(props) {
             <p className="text-dark">
                 {props.data.wind} km/h
             </p>
-          
         </div>
         </div>
-        </div>
-    
-        <div className="">
-       
         </div>
   </div>
   );
