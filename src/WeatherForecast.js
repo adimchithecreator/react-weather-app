@@ -30,6 +30,9 @@ setLoaded(false);
                 </div>
               );
             }
+            else {
+              return null;
+            }
           })}
       </div>
     </div>
