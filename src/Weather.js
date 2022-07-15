@@ -3,7 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { ThreeDots } from  'react-loader-spinner'
+import { TailSpin } from  'react-loader-spinner'
 import WeatherForecast from "./WeatherForecast";
 
 
@@ -69,6 +69,10 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return <ThreeDots color="#00BFFF"  height={80} width={80} />
+    return (
+      <div className="d-flex justify-content-center">
+    <TailSpin color="#00BFFF" display="flex" height={80} width={80} />
+    </div>
+    )
   }
 }
